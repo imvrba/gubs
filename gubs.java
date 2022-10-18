@@ -12,8 +12,7 @@ public class gubs {
 	int remainingCards = 17; //make this an array
 
 
-	public void shuffleRemainingCards(int deck[]) {
-		int currentCard = 0;
+	public static void shuffleRemainingCards(int deck[]) {
 		Random rand = new Random();
 
 		for (int first = 0; first < deck.length; first++)	{
@@ -24,10 +23,15 @@ public class gubs {
 			int temp = deck[first];
 			deck[first] = deck[second];
 			deck[second] = temp;
+		}
+		return;
 	}
 
 
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		System.out.println("Starting a fresh game of gubs");
 		//assign card values to card ids
@@ -37,13 +41,12 @@ public class gubs {
 
 		int deck[] = new int[numberOfCards]; //13 gubs, 4 spears
 
-		shuffleRemainingCards(deck);
-
 		for (int i = 0; i < numberOfCards; i++)	{
 			deck[i] = i;	//0 can be esteemed?
 			//System.out.println();
 		}
 
+		shuffleRemainingCards(deck);
 
 		//shuffle and print cards
 		for(int cardID:deck)	{
