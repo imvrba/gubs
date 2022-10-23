@@ -1,7 +1,3 @@
-/*
- * start with 13 gubs and 4 spears
- */
-
 import java.io.*;
 import java.math.*; 
 import java.util.Random;
@@ -9,7 +5,7 @@ import java.util.Random;
 
 
 public class gubs {
-	int remainingCards = 17; //make this an array
+	//int remainingCards = 17; //make this an array
 
 
 	public static void shuffleRemainingCards(int deck[]) {
@@ -33,10 +29,9 @@ public class gubs {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println("Starting a fresh game of gubs");
-		//assign card values to card ids
-		//shuffle remaining cards
-		int numberOfCards = 17;
+		System.out.println("Starting a fresh game of gubs...");
+
+		int numberOfCards = 70;
 		Random rand = new Random();
 
 		int deck[] = new int[numberOfCards]; //13 gubs, 4 spears
@@ -50,16 +45,7 @@ public class gubs {
 
 		//shuffle and print cards
 		for(int cardID:deck)	{
-			//int source = rand.nextInt() % 52;
-			//int dest = rand.nextInt() % 52;
 
-			//System.out.println(source);
-			//System.out.println(dest);
-
-			// int shuffleCard = deck[source];
-	        // deck[source] = deck[dest];
-	        // deck[dest] = shuffleCard;
-			
 			System.out.println(cardID);
 		}
 		
